@@ -35,13 +35,6 @@ keystone.init({
 
 });
 // Load your project's Models
-var cloudName = process.env.CLNY_CLOUD_NAME;
-var apiKey = process.env.CLNY_API_KEY;
-var apiSecret = process.env.CLNY_API_SECRET;
-console.log(cloudName);
-console.log(apiKey);
-console.log(apiSecret);
-keystone.set('cloudinary config', { cloud_name: cloudName, api_key: apiKey, api_secret: apiSecret });
 
 //keystone.set('cloudinary config', { cloud_name: 'db2bgy4r2', api_key: '731744781961812', api_secret: 'wCbzDB_nhqrpAk4zu1MtrJQfXOw' });
 // or
@@ -68,6 +61,13 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
+var cloudName = locals.env.CLNY_CLOUD_NAME;
+var apiKey = locals.env.CLNY_API_KEY;
+var apiSecret = locals.env.CLNY_API_SECRET;
+console.log(cloudName);
+console.log(apiKey);
+console.log(apiSecret);
+keystone.set('cloudinary config', { cloud_name: cloudName, api_key: apiKey, api_secret: apiSecret });
 
 // Load your project's Routes
 
