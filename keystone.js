@@ -35,10 +35,13 @@ keystone.init({
 
 });
 // Load your project's Models
-var cloud_name = process.env.CLNY_CLOUD_NAME;
-var api_key = process.env.CLNY_API_KEY;
-var api_secret = process.env.CLNY_API_SECRET;
-keystone.set('cloudinary config', { cloud_name: cloud_name, api_key: api_key, api_secret: api_secret });
+var cloudName = process.env.CLNY_CLOUD_NAME;
+var apiKey = process.env.CLNY_API_KEY;
+var apiSecret = process.env.CLNY_API_SECRET;
+console.log(cloudName);
+console.log(apiKey);
+console.log(apiSecret);
+keystone.set('cloudinary config', { cloud_name: cloudName, api_key: apiKey, api_secret: apiSecret });
 
 //keystone.set('cloudinary config', { cloud_name: 'db2bgy4r2', api_key: '731744781961812', api_secret: 'wCbzDB_nhqrpAk4zu1MtrJQfXOw' });
 // or
