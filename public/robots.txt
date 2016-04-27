@@ -1,0 +1,3 @@
+Sitemap: http://altitudelabs.com/sitemap.xml
+User-agent:*
+Disallow: /404

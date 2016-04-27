@@ -1,0 +1,14 @@
+  {{> nav active }}
+  <div class="page-header">
+    <div class="section-bg {{ content.name }}" style="
+    background-image: url({{ content.headerImg }});
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.{{ content.headerImg }}', sizingMethod='scale');
+    -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ content.headerImg }}', sizingMethod='scale')';
+    "></div>
+    <div class="section-content">
+      <span>{{ content.prefix }}</span>
+      <h1>{{ content.title }}</h1>
+      <span>{{ content.description }}</span>
+    </div>
+    <div class="scroll-down-icon"></div>
+  </div>

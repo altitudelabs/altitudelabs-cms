@@ -1,0 +1,36 @@
+{
+  "name": "frame-player",
+  "version": "0.2.1",
+  "homepage": "https://github.com/vagnervjs/frame-player",
+  "authors": [
+    "Vagner Santana <vagnervjs@gmail.com>"
+  ],
+  "description": "A video player without video files, just JSON. Based on \"images frames\" thought to mobile devices!",
+  "main": "src/js/frameplayer.js",
+  "keywords": [
+    "json",
+    "player",
+    "frame",
+    "mobile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "videos",
+    "js",
+    "css"
+  ],
+  "_release": "0.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.2.1",
+    "commit": "a930dd0fc6d027c1871aeed7342fcb43d351841d"
+  },
+  "_source": "git://github.com/vagnervjs/frame-player.git",
+  "_target": "~0.2.1",
+  "_originalSource": "vagnervjs/frame-player"
+}
