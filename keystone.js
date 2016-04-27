@@ -61,9 +61,9 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
-var cloudName = locals.env.CLNY_CLOUD_NAME;
-var apiKey = locals.env.CLNY_API_KEY;
-var apiSecret = locals.env.CLNY_API_SECRET;
+var cloudName = process.env.CLNY_CLOUD_NAME;
+var apiKey = process.env.CLNY_API_KEY;
+var apiSecret = process.env.CLNY_API_SECRET;
 console.log(cloudName);
 console.log(apiKey);
 console.log(apiSecret);
