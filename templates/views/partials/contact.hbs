@@ -1,0 +1,30 @@
+<!-- Start Contact -->
+<div class="contact-container">
+<div class="select-location">
+  <div class="select-location-title">
+    <h1>Let's Chat</h1>
+    <p>Contact us at one of three locations!</p>
+  </div>
+  <div class="locations">
+    <div class="location hong-kong" data-location="Hong Kong">Hong Kong</div>
+    <div class="location singapore" data-location="Singapore">Singapore</div>
+    <div class="location san-francisco" data-location="San Francisco">San Francisco</div>
+  </div>
+</div>
+<div class="contact-form">
+  <div class="btn-left"></div>
+  <div class="location-title">San Francisco</div>
+  <form id="contact-form">
+    <input type="hidden" name="location" id="contact_location" value="">
+    <input type="text" name="full-name" id="contact_name" data-placeholder="Name *" placeholder="Name *" class="half">
+    <input type="text" name="email" id="contact_email" data-placeholder="Your Email *" placeholder="Email *" class="half">
+    <input type="text" name="budget" id="contact_budget" data-placeholder="Budget (US$)" placeholder="Budget (US$)" class="half">
+    <!--input type="text" name="message" id="contact_message" data-placeholder="What's up?" placeholder=" What's up?"-->
+    <textarea name="message" id="contact_message" data-placeholder="How can we help? *" placeholder="How can we help? *"></textarea>
+    <div class="ajax-message error"><p>There has been an error sending your contact message. Please try again later.</p></div>
+    <div class="ajax-message success"><p>Thanks for reaching out. You will hear from us within two business days.</p></div>
+    <div class="validation-message"><p></p></div>
+    <a href="#" class="btn send-email">Send it</a>
+  </form>
+</div>
+</div>

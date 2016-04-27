@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+  <title>{{ meta.title }} | Altitude Labs</title>
+  <meta name="description" content="{{ meta.description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/bundle/main.min.css">
+</head>
+{{> out-dated-warning }}
+<body class="project show-content" data-class="{{ meta.slug }}">
+  {{>nav-menu active}}
+  <div class="body-container left"></div>
+  <div class="body-container right"></div>
+  <div class="body-container">
+    {{>nav active}}
+    <style>
+    .project .page-header {
+      background-color: {{ project.themeColor }};
+    }
+    .project h2 {
+      color: {{ project.themeColor }};
+    }
+    .project .bx-pager:before {
+      border-color: {{ project.themeColor }};
+    }
+    </style>
+    <div class="page-header project-header">
+      <div class="section-bg {{ meta.slug }}" style="
+      background-image: url({{ project.themeHeader.url }});
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.{{ project.themeHeader.url }}', sizingMethod='scale');
+      -ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{{ project.themeHeader.url }}', sizingMethod='scale')';
+      "></div>
+      <a data-target="{{ project.previousProject}}" class="btn-left"></a>
+      <a data-target="{{ project.nextProject}}" class="btn-right"></a>
+      <div class="section-content">
+        <h1>{{ project.projectName }}</h1>
+        <span>{{ project.headerDescription }}</span>
+      </div>
+      <div class="scroll-down-icon"></div>
+    </div>
+
+    <div class="basic-info">
+      <div class="category">
+        <h3>Client</h3>
+        <span>{{ project.client }}</span>
+        <hr />
+        <h3>YEAR</h3>
+        <span>{{ project.year }}</span>
+        <hr />
+        <h3>SERVICES</h3>
+        {{#each project.services}}
+          <span>{{ this.name }}</span>
+        {{/each}}
+        <hr />
+      </div>
+      <div class="challenge">
+        <h3>THE CHALLENGE</h3>
+        <h2>{{ project.theChallengeTitle }}</h2>
+        <p>{{ project.theChallengeContent }}</p>
+      </div>
+    </div>
+    <div class="pic-slider-full">
+      <div id="slider-full-{{ meta.slug }}" class="slider-full">
+        {{#each project.gallery}}
+          <div class="slide"><div class="img"><img src="{{ this.url }}" alt="{{ project.projectName }} - {{ project.headerDescription }}" /></div></div>
+        {{/each}}
+      </div>
+    </div>
+    <div class="our-solution">
+      <div class="container">
+        <div class="pic-slider-mobile-placeholder">
+        <div class="pic-slider-mobile {{ project.operationSystem }}">
+          <div class="close-btn">Close</div>
+          <div id="slider-mobile-{{ mata.slug }}" class="slider-mobile">
+            {{#each project.screenShot}}
+              <div class="slide"><div class="img"><img src="{{ this.url }}" alt="{{ project.projectName }} - {{ project.headerDescription }}" /></div></div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+        <div class="solution-description">
+          <h3>OUR SOLUTION</h3>
+          <h2>{{ project.ourSolutionTitle }}</h2>
+          <p>{{ project.ourSolutionContent }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="results">
+      <h3>THE RESULTS</h3>
+      <h2>{{ project.theResultsTitle }}</h2>
+      <p>{{ project.theResultsContent }}</p>
+    </div>
+    <!--div class="preview">
+      <a href="{{content.url}}" class="{{content.osSlider.type}}">
+      </a>
+    </div-->
+    <div class="stat">
+      <div class="hoursSpent">
+        <h1 class="anim-count" data-num="{{project.hoursSpent}}">{{project.hoursSpent}}</h1>
+        <h3>HOURS SPENT</h3>
+      </div>
+      <div class="screensDesigned">
+        <h1 class="anim-count" data-num="{{project.screensDesigned}}">{{project.screensDesigned}}</h1>
+        <h3>Screens Designed</h3>
+      </div>
+    </div>
+
+    {{> letchat }}
+
+    {{> footer }}
+</div>
+
+  {{> google-analytics}}
+
+  {{> assets}}
+
+
+</body>
+</html>

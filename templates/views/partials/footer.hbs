@@ -1,0 +1,41 @@
+<footer>
+<div class="sitemap">
+  <div class="al-info">
+    <div class="logo"><a href="/"><img src="/img/footer-logo.png" alt="Altitude Labs: Web Design &amp; Mobile Development"></a></div>
+    <span>Bringing Software To New Heights</span>
+
+    <div class="locations">
+      <strong>Office Locations:</strong>
+      <a {{#if active.activeServices }}href="/hong-kong{{url}}" onclick="return false;" draggable="false"{{/if}} ><span>Hong Kong</span></a>
+      <a {{#if active.activeServices }}href="/singapore{{url}}" onclick="return false;" draggable="false"{{/if}} ><span>Singapore</span></a>
+      <a {{#if active.activeServices }}href="/san-francisco{{url}}" onclick="return false;" draggable="false"{{/if}}><span>San Francisco</span></a>
+    </div>
+  </div>
+  <div class="footer-section footer-section-company">
+    <div class="header">ABOUT</div>
+    <a href="/">Work</a>
+    <a href="/services">About Us</a>
+    <a href="/team">Our Team</a>
+    <a href="/blog">Blog</a>
+    <a href="/careers">Careers</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <div class="footer-section footer-section-services expand">
+    <div class="header">SERVICES</div>
+    {{>capabilities}}
+  </div>
+  <div class="footer-section footer-section-services">
+    <div class="header">PRODUCTS</div>
+    <a href="http://askmetisa.com">Metisa</a>
+    <a href="http://fundity.co">Fundity</a>
+  </div>
+  <div class="footer-section">
+    <div class="header">SOCIAL</div>
+    <a href="http://facebook.com/altitudelabs"><em class="fa fa-facebook"></em>Facebook</a>
+    <a href="http://twitter.com/altitudelabs"><em class="fa fa-twitter"></em>Twitter</a>
+    <a href="http://www.behance.net/altitudelabs"><em class="fa fa-behance"></em>Behance</a>
+    <a href="http://altitudelabs.com/blog/rss"><em class="fa fa-rss"></em>RSS Feed</a>
+  </div>
+  {{>footer-seo}}
+</div>
+</footer>
