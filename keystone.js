@@ -49,7 +49,6 @@ keystone.init({
 // optional, will force cloudinary to serve images over https
 //keystone.set('cloudinary secure', true);
 
-keystone.import('models');
 
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
@@ -61,14 +60,12 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable
 });
+
 var cloudName = process.env.CLNY_CLOUD_NAME;
 var apiKey = process.env.CLNY_API_KEY;
 var apiSecret = process.env.CLNY_API_SECRET;
-console.log(cloudName);
-console.log(apiKey);
-console.log(apiSecret);
 keystone.set('cloudinary config', { cloud_name: cloudName, api_key: apiKey, api_secret: apiSecret });
-
+keystone.import('models');
 // Load your project's Routes
 
 keystone.set('routes', require('./routes'));
