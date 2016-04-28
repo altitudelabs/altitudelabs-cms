@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 
-exports = module.exports = function(req, res) {
+exports.index = function(req, res) {
 
 	var view = new keystone.View(req, res);
 	var locals = res.locals;
@@ -59,4 +59,13 @@ exports = module.exports = function(req, res) {
 	// Render the view
 	view.render('project',{ layout: 'empty' });
 
+};
+
+exports.list = function(req, res) {
+	res.header("Access-Control-Allow-Origin", "*");
+	keystone.list('CaseStudy').model.find().select('projectName slug themeHeader headerDescription').sort('-sortOrder').exec(function(err, items) {
+		if (err) return res.sendStatus(500);
+		res.status(200).send(items);
+
+	});
 };

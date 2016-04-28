@@ -35,7 +35,8 @@ var routes = {
 exports = module.exports = function(app) {
 
 // Views
-app.get('/project/:projectSlug', routes.views.index);
+app.get('/project/list', routes.views.project.list);
+app.get('/project/:projectSlug', routes.views.project.index);
 keystone.set('404', function(req, res, next) {
     res.redirect('http://altitudelabs.com/404');
 });
